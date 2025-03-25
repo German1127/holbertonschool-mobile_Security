@@ -52,3 +52,43 @@ Instructions:
 
 ---
 
+# Hooking Native Functions in Android 
+In this challenge, you will explore the dynamic analysis of an Android application that utilizes native code through the Java Native Interface (JNI).
+
+Your goal is to analyze and manipulate native functions using Frida to intercept, modify, and extract the decrypted flag from the application’s native code.
+
+**Objective:**
+Perform dynamic analysis to hook into a native function within the Android application and retrieve the decrypted flag that is processed in the native code but not displayed in the app interface.
+
+## Tools:
+
+ - Frida
+ - ADB (Android Debug Bridge)
+ - Objection
+ - Android Studio
+
+```
+Instructions:
+ - Analyze App Behavior: Launch the app and familiarize yourself with its functionality and user interface.
+ - Identify the Native Library: Locate the native library (e.g., `libnative-lib.so`) .
+ - Intercept Native Functions with Frida: Attach Frida to the running app and hook into the native function getSecretMessage.
+ - Extract the Flag from Native Code: Observe and manipulate the data processed by the hooked function to retrieve the hidden flag.
+```
+
+## Hints
+
+- Utilize Frida’s scripting capabilities to hook and modify the behavior of the native functions.
+- Use Frida’s **Interceptor.attach()** method to hook the function dynamically.
+- Use adb logcat to monitor the app’s logs, which may provide useful information during your analysis.
+- Explore Objection for additional convenience in hooking and inspecting the app.
+- Check JNI function exports using **frida -U -n <package_name> -i** to list loaded symbols
+
+## Deliverables
+
+- A report detailing the process of hooking the native function and the methods used to extract the hidden flag.
+- The decrypted flag obtained from the native function.
+- Provide **astep-by-step** report detailing how you identified, hooked, and extracted the flag.
+
+---
+
+
