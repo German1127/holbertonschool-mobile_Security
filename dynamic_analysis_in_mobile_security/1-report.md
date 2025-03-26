@@ -66,6 +66,14 @@ frida -U -n com.target.app -s hook.js --no-pause
 ```    
 adb logcat | grep "Flag:"
 ```
+
+###Results
+
+The decrypted flag extracted from getSecretMessage is:
+```
+Holberton{native_hooking_is_no_different_at_all}
+```
+
 ### Conclusion
 
 By using Frida, we successfully hooked the native function getSecretMessage in the application’s native library and extracted the hidden flag. This demonstrates the effectiveness of dynamic analysis techniques in reverse engineering Android applications that use JNI for sensitive operations.
