@@ -23,7 +23,7 @@ Installed Frida on both the host machine and the Android device:
     adb shell "su -c 'chmod 755 /data/local/tmp/frida-server'"
     adb shell "su -c '/data/local/tmp/frida-server &'
 ```
-    Verified Frida was working by running:
+Verified Frida was working by running:
 ```    
 frida -U -n com.target.app -i
 ```
