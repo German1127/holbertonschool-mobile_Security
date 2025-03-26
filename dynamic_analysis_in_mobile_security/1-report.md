@@ -67,7 +67,7 @@ frida -U -n com.target.app -s hook.js --no-pause
 adb logcat | grep "Flag:"
 ```
 
-###Results
+### Results
 
 The decrypted flag extracted from getSecretMessage is:
 ```
