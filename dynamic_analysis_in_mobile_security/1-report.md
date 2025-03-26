@@ -25,14 +25,14 @@ Installed Frida on both the host machine and the Android device:
 ```
 Verified Frida was working by running:
 ```    
-frida -U -n com.target.app -i
+frida -U -n task1_d.apk -i
 ```
 ### 2. Identifying the Native Library
 
    
  Extracted the APK and analyzed it using Android Studio and objdump:
 ```   
- adb shell "run-as com.target.app ls /data/data/com.target.app/lib"
+ adb shell "run-as task1_d.apk  ls /data/data/com.target.app/lib"
 ```
     Found libnative-lib.so as the native library.
 
@@ -40,7 +40,7 @@ frida -U -n com.target.app -i
 
 Ran Frida to list available symbols:
 ```
-frida -U -n com.target.app -i -e 'console.log(Module.findExportByName("libnative-lib.so", "getSecretMessage"));'
+frida -U -n task1_d.apk  -i -e 'console.log(Module.findExportByName("libnative-lib.so", "getSecretMessage"));'
 ```
 ### 4. Hooking the Native Function with Frida
  Wrote a Frida script to intercept getSecretMessage:
@@ -60,7 +60,7 @@ frida -U -n com.target.app -i -e 'console.log(Module.findExportByName("libnative
 
  Ran the script:
 ```    
-frida -U -n com.target.app -s hook.js --no-pause
+frida -U -n task1_d.apk  -s hook.js --no-pause
 ```
  Retrieved the decrypted flag from logs:
 ```    
