@@ -76,6 +76,12 @@ key = b"HARDCODED_AES_KEY"
 print(decrypt_aes(ciphertext, key))
 
 ```
+
+**Extracted Flag:**
+```
+Holberton{keystore_is_not_as_safe_as_u_think!}
+
+```
 ---
 
 ## 6. Challenges Faced
