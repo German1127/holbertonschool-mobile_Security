@@ -59,6 +59,10 @@ objection -g task3_d explore
 - Identify key functions: android hooking search classes secret
 ---
 
+## Retrieved Flag
+```
+Holberton{calling_uncalled_functions_is_now_known!}
+```
+
 ## Conclusion 
 By combining reverse engineering and dynamic analysis, the hidden functions were successfully located, invoked, and exploited to retrieve the secret flag. This challenge highlights the importance of secure coding practices to protect sensitive application components.
-
